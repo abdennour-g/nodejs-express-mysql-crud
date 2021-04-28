@@ -1,0 +1,90 @@
+html,
+body {
+    background: rgb(245, 245, 245);
+    padding: 0;
+    margin: 0;
+}
+
+[class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+header {
+    background: rgb(140, 140, 140);
+    height: 200px;
+    margin-top: 0;
+    text-align: center;
+    color: red;
+    font-family: cursive;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font: 30px/200px caption;
+}
+
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+section {
+    background: rgb(191, 191, 211);
+    min-height: 600px !important;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+}
+
+footer {
+    background: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div.parag {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-indent: 15px;
+    font-size: 19px;
+    font-style: italic;
+    font-variant: all-small-caps;
+}
+
+ul.reseaux,
+ul.contact {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 30%;
+    float: left;
+}
+
+ul.contact {}
+
+ul li {
+    color: white;
+}
+
+ul.ul_inf {
+    list-style-type: georgian;
+}
+
+ul.ul_inf h5 {
+    color: blue;
+    text-decoration: underline;
+}
+
+ul.ul_inf li {
+    color: rgb(0, 0, 100);
+    margin-left: 40px;
+}
+
+.add {
+    margin-left: 20px;
+}

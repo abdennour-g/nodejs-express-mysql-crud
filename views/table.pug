@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    .parag
+        button.btn.btn-primary.add(data-toggle='modal' href='#block_form')
+            span.glyphicon.glyphicon-plus
+        table.table.table-striped
+            thead
+                tr
+                    th cin
+                    th nom 
+                    th tel 
+                    th edit 
+                    th del 
+            tbody             
+                each block in blocks 
+                    tr
+                        td= block.cin 
+                        td= block.nom 
+                        td= block.tel 
+                        td 
+                            button.btn.btn-primary(data-toggle='modal' href='#block_form' onclick='edit("'+block.id+'","'+block.cin+'","'+block.nom+'","'+block.tel+'")')
+                                span.glyphicon.glyphicon-pencil
+                        td 
+                            button.btn.btn-danger(onclick='del("'+block.id+'")')
+                                span.glyphicon.glyphicon-trash
+        #block_form.modal.fade
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button.close(type='button' data-dismiss='modal') x
+                        h4.modal-title FORMULAIRE DE SAISIE
+                    .modal-body
+                        form(method='post' action='/post')
+                            .form-group
+                                label(for='cin') cin:
+                                input.form-control.cin(type='text' name='cin' placeholder='Enter cin')
+                            .form-group
+                                label(for='nom') name:
+                                input.form-control.nom(type='text' name='nom' placeholder='Enter name')
+                            .form-group
+                                label(for='tel') tel:
+                                input.form-control.tel(type='text' name='tel' placeholder='Enter tel')
+                            input.btn.btn-success(type='submit' value='Save')              
+                    .modal-footer
+                        button.btn.btn-info(data-dismiss='modal') Fermer
+

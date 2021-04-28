@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title #{title}
+    link(rel='shortcut icon' href='img/walid.png' type='image/vnd.microsoft.icon')
+    link(href='css/bootstrap.min.css' rel='stylesheet')
+    link(href='css/style.css?sinc='+sinc rel='stylesheet')
+  header.col-xs-offset-2.col-xs-8.head
+    h1= title    
+    p ,  Welcome to #{title} , #{sinc} ,  ,
+  nav.col-xs-offset-2.col-xs-8.navbar.navbar-inverse
+    ul.nav.navbar-nav
+      li.active
+        a(href='/') Accueil
+      li
+        a(href='/table') TABLEAU STANDARD      
+      li
+        a(href='/webservice') WEBSERVICE
+      
+      
+  section.col-xs-offset-2.col-xs-8
+    block content
+  block foot
+    footer.col-xs-offset-2.col-xs-8
+      ul.reseaux
+        li
+          | facebook
+        li
+          | twitter
+        li
+          | instagram
+        li
+          | snapchat
+      ul.contact
+        li
+          | tel
+        li
+          | email
+        li
+          | adresse
+script(src='js/jquery.js')
+script(src='js/bootstrap.min.js')
+script(src='js/main.js')
